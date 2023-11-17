@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(90deg, #0c164d 0%, #190b22 100%);
+  height: 100vh;
+  width: 100vw;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.header h1 {
+  color: #fff;
+  text-align: right;
+  font-family: Secular One;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 5.4px;
+  margin-right: 5%;
+  margin-top: 3%;
+}
+
+.header h2 {
+  color: #ffd029;
+
+  text-align: right;
+  font-family: Lora;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 24px */
+  letter-spacing: 14.4px;
+  margin-right: 5%;
+  margin-top: 0.5%;
+}
+
+.nasa-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nasa-logo img {
+  width: 50px;
+  position: absolute;
+  left: 50%;
+  top: 95%;
+  transform: translate(-50%, -50%);
+}
+
+.planets-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 15%;
+  margin-left: 5%;
+}
+
+.planet {
+  display: flex;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.planet:hover {
+  transition: 0.3s;
+  scale: 1.2;
+}
+
+.planet img {
+  width: auto;
+  height: auto;
+  display: flex;
+  cursor: pointer;
+}
+
+#saturnus-ring {
+  position: absolute;
+  width: 130%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#saturnus {
+  position: relative;
+}
+
+#solen {
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  height: 800px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #ffd029;
+  box-shadow: 0px 0px 250px 0px rgba(255, 209, 41, 0.854);
+  left: -30%;
+  top: 10%;
+  cursor: pointer;
+}
+
+#solen:hover {
+  transition: 0.3;
+  scale: 1.1;
+}
+
+.modal-nasa-logo img {
+  width: 50px;
+  position: absolute;
+  left: 50%;
+  top: 95%;
+  transform: translate(-50%, -50%);
+}
+
+.modal {
+  padding: 1em;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(90deg, #0c164d 0%, #190b22 100%);
+}
+.modal-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal-container {
+  width: 640px;
+  height: 680px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr 0.5fr 0.5fr 1fr;
+  row-gap: 20px;
+  grid-template-areas:
+    'name name'
+    'desc desc'
+    'circum distance'
+    'max-temp min-temp'
+    'moons moons';
+  color: #fff;
+}
+
+.planet-name,
+.planet-name-latin {
+  grid-area: name;
+}
+.planet-name h2 {
+  color: #fff;
+  font-family: Secular One;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 5.4px;
+}
+.planet-name-latin h3 {
+  color: #ffd029;
+
+  font-family: Lora;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 14.4px;
+}
+
+.planet-description {
+  grid-area: desc;
+  color: #fff;
+
+  font-family: Roboto Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 170%;
+}
+
+.circumference {
+  grid-area: circum;
+  border-bottom: 1px solid grey;
+}
+
+.distance {
+  grid-area: distance;
+  border-bottom: 1px solid grey;
+}
+
+.max-temp {
+  grid-area: max-temp;
+  border-bottom: 1px solid grey;
+}
+
+.min-temp {
+  grid-area: min-temp;
+  border-bottom: 1px solid grey;
+}
+
+.moons {
+  grid-area: moons;
+}
+
+button {
+  background-color: transparent;
+  color: #fff;
+  border-style: none;
+  font-size: 18px;
+  transition: 1s;
+  scale: 1;
+  border-color: transparent;
+}
+
+button:hover {
+  transition: 1s;
+  scale: 1.8;
+  cursor: pointer;
+  text-shadow: #ffd029;
+}
+
+h4 {
+  color: #fff;
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 18px */
+  letter-spacing: 1.62px;
+}
